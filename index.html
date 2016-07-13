@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code example</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <script type="text/javascript" src="//monospaced.github.io/bower-qrcode-generator/js/qrcode.js"></script>
+    <script type="text/javascript" src="//monospaced.github.io/bower-qrcode-generator/js/qrcode_UTF8.js"></script>
+    <script type="text/javascript" src="//monospaced.github.io/angular-qrcode/angular-qrcode.js"></script>
+</head>
+<body ng-app="app">
+    <h3>Generate QR Code Example</h3>
+    <p><input type="text" placeholder="Type any text" ng-model="qrcodeInput"/></p>
+    <p><qrcode data="{{qrcodeInput}}"></qrcode></p>
+    <script>
+        angular.module('app', ['monospaced.qrcode']);
+    </script>
+</body>
+</html>
